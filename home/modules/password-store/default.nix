@@ -21,7 +21,7 @@ in
         PASSWORD_STORE_DIR = "$HOME/.password-store";
       };
 
-      package = pkgs.pass.withExtensions (
+      package = pkgs.pass-wayland.withExtensions (
         exts: with exts; [
           pass-update
           pass-import
