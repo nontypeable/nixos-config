@@ -33,6 +33,7 @@ let
 
         "${self}/system/nixos/modules"
         "${self}/system"
+        "${self}/home"
       ];
     };
 
