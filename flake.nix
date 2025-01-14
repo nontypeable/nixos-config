@@ -50,5 +50,11 @@
     };
   };
 
-  outputs = { self, ... }@inputs: { };
+  outputs =
+    { self, ... }@inputs:
+    let
+      # Hosts description.
+      hosts = import ./hosts.nix;
+    in
+    { };
 }
