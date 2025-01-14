@@ -7,6 +7,7 @@
 
     packages = {
       systemPackages.enable = true;
+      gnupg.enable = true;
     };
   };
 }
