@@ -51,10 +51,20 @@
   };
 
   outputs =
-    { self, ... }@inputs:
+    { self, flake-parts, ... }@inputs:
     let
       # Hosts description.
       hosts = import ./hosts.nix;
+
+      # Import auxiliary function.
+      libx = import ./lib { inherit self inputs; };
     in
-    { };
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = libx.availableArchitectures;
+
+      flake = {
+        # NixOS Hosts configuration
+        nixosConfigurations = libx.generateNixOSHostConfig hosts.hosts;
+      };
+    };
 }
