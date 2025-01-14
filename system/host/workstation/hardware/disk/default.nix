@@ -25,6 +25,11 @@
                 subvolumes = {
                   "@" = {
                     mountpoint = "/";
+                    swap = {
+                      swapfile = {
+                        size = "16G";
+                      };
+                    };
                   };
                   "@home" = {
                     mountOptions = [ "compress=zstd" ];
@@ -36,12 +41,6 @@
                       "noatime"
                     ];
                     mountpoint = "/nix";
-                  };
-                };
-                mountpoint = "/swapfile";
-                swap = {
-                  swapfile = {
-                    size = "16G";
                   };
                 };
               };
