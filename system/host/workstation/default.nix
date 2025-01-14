@@ -1,1 +1,5 @@
-{ }
+{
+  module = {
+    boot.enable = true;
+  };
+}
