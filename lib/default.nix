@@ -31,7 +31,7 @@ let
         inputs.home-manager.nixosModules.home-manager
         inputs.disko.nixosModules.disko
 
-        "${self}/system/modules"
+        "${self}/system/nixos/modules"
         "${self}/system"
       ];
     };
