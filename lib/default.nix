@@ -5,13 +5,13 @@ let
 
   # Auxiliary function for creating a host configuration for NixOS.
   generateNixOSHostConfig =
-    hostDir:
+    hostDirectory:
     {
       username ? "user",
       stateVersion ? defaultStateVersion,
       homeManagerStateVersion ? stateVersion,
       platform ? "x86_64-linux",
-      hostname ? hostDir,
+      hostname ? hostDirectory,
     }:
     inputs.nixpkgs.lib.nixosSystem {
       specialArgs = {
@@ -23,7 +23,7 @@ let
           stateVersion
           homeManagerStateVersion
           platform
-          hostDir
+          hostDirectory
           ;
       };
 
