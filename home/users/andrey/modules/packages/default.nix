@@ -32,16 +32,17 @@ in
       pre-commit
       deadnix
       statix
+      vscode
 
       # DevOps Utils.
       docker-compose
 
       # Chats.
       telegram-desktop
-      discord
 
       # Misc.
       obs-studio
+      bitwarden
       vlc
 
       # Desktop Integration Utilities.
