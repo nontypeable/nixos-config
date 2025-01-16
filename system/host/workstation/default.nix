@@ -5,6 +5,7 @@
     users.enable = true;
     timezone.enable = true;
     virtualization.enable = true;
+    bluetooth.enable = true;
 
     packages = {
       systemPackages.enable = true;
