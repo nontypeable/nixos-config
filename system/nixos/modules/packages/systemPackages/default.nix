@@ -26,6 +26,10 @@ in
       unzip
       killall
       nix-output-monitor
+      openssl
+      libgcc
+      gcc
+      brightnessctl
 
       # Hardware
       microcode-amd

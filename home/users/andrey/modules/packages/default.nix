@@ -23,6 +23,8 @@ in
       ffmpeg
       tokei
       obsidian
+      jq
+      typos
 
       # Programming.
       go
@@ -33,6 +35,8 @@ in
       deadnix
       statix
       vscode
+      jetbrains-toolbox
+      postman
 
       # DevOps Utils.
       docker-compose
@@ -42,6 +46,8 @@ in
 
       # Misc.
       obs-studio
+      chromium
+      spotify
       bitwarden
       vlc
 
