@@ -6,6 +6,7 @@
     timezone.enable = true;
     virtualization.enable = true;
     bluetooth.enable = true;
+    zram.enable = true;
 
     packages = {
       systemPackages.enable = true;
