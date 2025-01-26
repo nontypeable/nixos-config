@@ -20,6 +20,10 @@ in
           "flakes"
         ];
       };
+      
+      gc = {
+        options = "--delete-older-than 14d";
+      };
     };
   };
 }
