@@ -62,6 +62,10 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = libx.availableArchitectures;
 
+      imports = [
+        ./treefmt
+      ];
+
       flake = {
         # NixOS Hosts configuration
         nixosConfigurations = libx.generateNixOSHostConfig hosts.hosts;

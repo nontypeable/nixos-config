@@ -18,6 +18,11 @@ in
     fonts.fontconfig.enable = true;
 
     home.packages = with pkgs; [
+      # Formatters.
+      deadnix
+      statix
+      nixfmt
+
       # Utils.
       bat
       ffmpeg
