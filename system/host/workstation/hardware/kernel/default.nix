@@ -4,9 +4,11 @@
   boot = {
     kernelPackages = pkgs.linuxPackages;
 
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [ "kvm-amd" "amdgpu" ];
 
     extraModulePackages = [ ];
+
+    kernelParams = [ "resume=none" ];
 
     initrd = {
       availableKernelModules = [
@@ -17,8 +19,6 @@
         "usbhid"
         "sd_mod"
       ];
-
-      kernelModules = [ "amdgpu" ];
     };
   };
 }
