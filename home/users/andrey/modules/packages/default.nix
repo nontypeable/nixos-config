@@ -21,7 +21,7 @@ in
       # Formatters.
       deadnix
       statix
-      nixfmt
+      nixfmt-rfc-style
 
       # Utils.
       bat
@@ -40,7 +40,6 @@ in
       deadnix
       statix
       vscode
-      jetbrains-toolbox
       postman
 
       # DevOps Utils.
