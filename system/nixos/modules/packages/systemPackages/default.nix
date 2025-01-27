@@ -19,6 +19,7 @@ in
       git
       curl
       neovim
+      fzf
       wget
       tree
       file
@@ -41,6 +42,11 @@ in
       inetutils
       nmap
       dnsutils
+    ];
+
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+      fira-code
     ];
   };
 }

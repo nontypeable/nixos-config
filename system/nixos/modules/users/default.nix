@@ -30,7 +30,7 @@ in
           uid = 1000;
           home = "/home/${username}";
           createHome = true;
-          shell = pkgs.bash;
+          shell = pkgs.zsh;
           group = "${username}";
           isNormalUser = true;
 

@@ -4,6 +4,7 @@
 
     git.enable = true;
     htop.enable = true;
+    zsh.enable = true;
 
     password-store.enable = true;
 

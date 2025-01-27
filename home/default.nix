@@ -13,12 +13,15 @@ let
   homeDirectory = if username == "root" then "/root" else "/home/${username}";
   userConfigPath = "${self}/home/users/${username}";
   userModulesPath = "${self}/home/users/${username}/modules";
-
+  timestamp = pkgs.runCommand "timestamp" { } ''
+    echo -n $(date '+%Y%m%d%H%M%S') > $out
+  '';
 in
 {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup-" + pkgs.lib.readFile timestamp;
 
     extraSpecialArgs = {
       inherit
