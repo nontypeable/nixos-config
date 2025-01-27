@@ -21,8 +21,19 @@ in
 
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "sudo" "poetry" "docker" "history" ];
+        plugins = [
+          "git"
+          "sudo"
+          "poetry"
+          "docker"
+          "history"
+        ];
         theme = "robbyrussell";
+      };
+
+      shellAliases = {
+        # System aliases.
+        "flake-update" = "nix flake update --flake /etc/nixos";
       };
 
       initExtra = ''
