@@ -12,6 +12,7 @@
       systemPackages.enable = true;
       gnupg.enable = true;
       plasma.enable = true;
+      steam.enable = true;
       zsh.enable = true;
     };
   };
