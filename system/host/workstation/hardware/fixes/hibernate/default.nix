@@ -1,5 +1,7 @@
 {
   systemd.sleep.extraConfig = ''
-    HibernateMode=shutdown
+    AllowHibernation=no
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
   '';
 }
