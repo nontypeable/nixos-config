@@ -19,6 +19,10 @@
         "usbhid"
         "sd_mod"
       ];
+
+      kernelModules = [
+        "amdgpu"
+      ];
     };
   };
 }
