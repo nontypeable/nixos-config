@@ -9,6 +9,10 @@
 
     password-store.enable = true;
 
+    services.syncthing = {
+      enable = true;
+    };
+
     user = {
       packages.enable = true;
     };

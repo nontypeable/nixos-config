@@ -14,9 +14,19 @@
 
     firewall = {
       enable = true;
-      checkReversePath = false; 
+      checkReversePath = false;
+      allowedTCPPorts = [
+        # Syncthing.
+        8384
+        22000
+      ];
       allowedUDPPorts = [
-        51820 # WireGuard
+        # WireGuard.
+        51820
+
+        # Syncthing.
+        22000
+        21027
       ];
     };
 
