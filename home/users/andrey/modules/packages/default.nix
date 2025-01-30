@@ -53,6 +53,7 @@ in
       chromium
       spotify
       bitwarden
+      libreoffice
       vlc
 
       # Desktop Integration Utilities.
