@@ -1,15 +1,74 @@
 {
-  description = "A very basic flake";
+  description = "nontypeable's flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    # -- nixpkgs --
+
+    # Latest versions of Nixpkgs from the master branch (extremely unstable).
+    master = {
+      url = "github:NixOS/nixpkgs/master";
+    };
+
+    # Unstable Nixpkgs branch (frequent updates, possible bugs).
+    unstable = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
+
+    # Stable Nixpkgs branch (less frequent updates, more stability).
+    stable = {
+      url = "github:NixOS/nixpkgs/nixos-24.11";
+    };
+
+    # Current branch of Nixpkgs.
+    nixpkgs = {
+      follows = "stable";
+    };
+
+    # -- nix-community --
+
+    # Home Manager: Manage user configuration with Nix.
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Disko: A tool for managing disk partitions using Nix.
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Flake Parts: A tool for managing reusable components in Nix flakes.
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
+    # Treefmt Nix: A tool for formatting Nix code to a consistent style.
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+    };
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs =
+    { self, flake-parts, ... }@inputs:
+    let
+      # Hosts description.
+      hosts = import ./hosts.nix;
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+      # Import auxiliary function.
+      libx = import ./lib { inherit self inputs; };
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = libx.availableArchitectures;
 
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+      imports = [
+        ./treefmt
+      ];
 
-  };
+      flake = {
+        # NixOS Hosts configuration
+        nixosConfigurations = libx.generateNixOSHostConfig hosts.hosts;
+      };
+    };
 }
