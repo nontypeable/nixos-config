@@ -15,8 +15,17 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      virt-manager
+    ];
+
+    users.groups = {
+      libvirtd.members = [ username ];
+    };
+
     virtualisation = {
       docker.enable = true;
+      libvirtd.enable = true;
     };
   };
 }
