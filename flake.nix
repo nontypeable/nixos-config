@@ -10,6 +10,9 @@
 
     # Flake Parts: A tool for managing reusable components in Nix flakes.
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # Disko: A tool for managing disk partitions using Nix.
+    disko.url = "github:nix-community/disko";
   };
 
   outputs =
