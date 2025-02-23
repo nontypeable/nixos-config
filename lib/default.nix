@@ -35,8 +35,10 @@ let
       };
 
       modules = [
-        "${self}/system"
         inputs.disko.nixosModules.disko
+
+        "${self}/system"
+        "${self}/system/module"
       ];
     };
 
