@@ -1,1 +1,5 @@
-{ }
+{
+  module = {
+    users.enable = true;
+  };
+}
