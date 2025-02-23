@@ -15,6 +15,7 @@ let
   mkNixosConfig =
     deviceDirectory:
     {
+      username ? "user",
       platform ? "x86_64-linux",
       repository ? "stable",
       stateVersion,
@@ -29,6 +30,7 @@ let
           inputs
           self
           deviceDirectory
+          username
           platform
           stateVersion
           ;
