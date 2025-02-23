@@ -34,7 +34,10 @@ let
           ;
       };
 
-      modules = [ ];
+      modules = [
+        "${self}/system"
+        inputs.disko.nixosModules.disko
+      ];
     };
 
   getAllSupportedSystems =
