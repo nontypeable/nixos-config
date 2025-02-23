@@ -22,7 +22,7 @@ in
 
       groups = {
         "${username}" = {
-          gid = 1000;
+          gid = gid;
         };
       };
 
