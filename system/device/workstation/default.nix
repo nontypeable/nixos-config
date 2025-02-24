@@ -4,5 +4,6 @@
     users.enable = true;
     nix.enable = true;
     locale.enable = true;
+    timezone.enable = true;
   };
 }
