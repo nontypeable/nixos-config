@@ -7,5 +7,6 @@
     timezone.enable = true;
     sound.enable = true;
     gnupg.enable = true;
+    plasma.enable = true;
   };
 }
