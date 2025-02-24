@@ -17,9 +17,18 @@ in
     useGlobalPkgs = true;
     useUserPackages = true;
 
+    extraSpecialArgs = {
+      inherit
+        inputs
+        self
+        ;
+    };
+
     users = {
       ${username} = {
         imports = [
+          "${self}/home/module"
+
           (if builtins.pathExists userConfigDirectory then userConfigDirectory else null)
           (if builtins.pathExists userPackagesDirectory then userPackagesDirectory else null)
         ];
@@ -29,6 +38,8 @@ in
 
       root = {
         imports = [
+          "${self}/home/module"
+
           (if builtins.pathExists rootConfigDirectory then rootConfigDirectory else null)
           (if builtins.pathExists rootPackagesDirectory then rootPackagesDirectory else null)
         ];
