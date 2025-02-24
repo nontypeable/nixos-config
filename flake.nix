@@ -13,6 +13,9 @@
 
     # Disko: A tool for managing disk partitions using Nix.
     disko.url = "github:nix-community/disko";
+    
+    # Home Manager: Manage user configuration with Nix.
+    home-manager.url = "github:nix-community/home-manager";
   };
 
   outputs =
