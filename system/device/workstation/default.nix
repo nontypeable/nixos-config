@@ -5,5 +5,6 @@
     nix.enable = true;
     locale.enable = true;
     timezone.enable = true;
+    sound.enable = true;
   };
 }
