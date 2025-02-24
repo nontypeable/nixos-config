@@ -6,5 +6,6 @@
     locale.enable = true;
     timezone.enable = true;
     sound.enable = true;
+    gnupg.enable = true;
   };
 }
