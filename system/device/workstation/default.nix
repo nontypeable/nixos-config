@@ -7,5 +7,6 @@
     timezone.enable = true;
     sound.enable = true;
     gnupg.enable = true;
+    kde-connect.enable = true;
   };
 }
