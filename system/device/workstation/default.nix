@@ -8,5 +8,6 @@
     sound.enable = true;
     gnupg.enable = true;
     plasma.enable = true;
+    kde-connect.enable = true;
   };
 }
