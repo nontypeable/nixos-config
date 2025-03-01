@@ -13,6 +13,9 @@
 
     # Disko: A tool for managing disk partitions using Nix.
     disko.url = "github:nix-community/disko";
+
+    # Treefmt Nix: A tool for formatting Nix files.
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
   outputs =
@@ -29,6 +32,10 @@
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = supportedSystems;
+
+      imports = [
+        ./treefmt
+      ];
 
       flake = {
         nixosConfigurations = builtins.mapAttrs libx.mkNixosConfig hosts.devices;
