@@ -22,13 +22,13 @@ in
 
       groups = {
         "${username}" = {
-          gid = gid;
+          inherit gid;
         };
       };
 
       users = {
         "${username}" = {
-          uid = uid;
+          inherit uid;
           home = "/home/${username}";
           createHome = true;
           shell = pkgs.bash;

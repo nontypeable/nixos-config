@@ -1,7 +1,6 @@
 {
   self,
   lib,
-  inputs,
   deviceDirectory,
   platform,
   stateVersion,
