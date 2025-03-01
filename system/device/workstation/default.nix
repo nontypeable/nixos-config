@@ -9,5 +9,6 @@
     gnupg.enable = true;
     plasma.enable = true;
     kde-connect.enable = true;
+    zram.enable = true;
   };
 }
