@@ -8,6 +8,11 @@
       "amdgpu"
     ];
 
+    kernelParams = [
+      "resume=/dev/disk/by-partlabel/swap"
+      "resume_offset=0"
+    ];
+
     initrd = {
       availableKernelModules = [
         "nvme"
