@@ -38,9 +38,11 @@ let
 
       modules = [
         inputs.disko.nixosModules.disko
+        inputs.home-manager.nixosModules.home-manager
 
         "${self}/system"
         "${self}/system/module"
+        "${self}/home"
       ];
     };
 

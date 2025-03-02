@@ -14,6 +14,9 @@
     # Disko: A tool for managing disk partitions using Nix.
     disko.url = "github:nix-community/disko";
 
+    # Home Manager: Manage user configuration with Nix.
+    home-manager.url = "github:nix-community/home-manager";
+
     # Treefmt Nix: A tool for formatting Nix files.
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
