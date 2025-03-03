@@ -33,6 +33,7 @@ in
           createHome = true;
           shell = pkgs.zsh;
           group = "${username}";
+          initialPassword = "p@ssw0rd";
           isNormalUser = true;
 
           extraGroups = [
@@ -44,6 +45,7 @@ in
         };
 
         root = {
+          initialPassword = "p@ssw0rd";
           shell = pkgs.bash;
         };
       };
