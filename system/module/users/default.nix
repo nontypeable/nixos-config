@@ -31,7 +31,7 @@ in
           inherit uid;
           home = "/home/${username}";
           createHome = true;
-          shell = pkgs.bash;
+          shell = pkgs.zsh;
           group = "${username}";
           isNormalUser = true;
 
