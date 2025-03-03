@@ -10,5 +10,6 @@
     plasma.enable = true;
     kde-connect.enable = true;
     zram.enable = true;
+    zsh.enable = true;
   };
 }
