@@ -6,6 +6,7 @@
     fzf.enable = true;
     firefox.enable = true;
     zsh.enable = true;
+    neovim.enable = true;
 
     andrey = {
       packages.enable = true;
