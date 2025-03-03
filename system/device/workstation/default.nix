@@ -12,5 +12,6 @@
     zram.enable = true;
     bluetooth.enable = true;
     zsh.enable = true;
+    wireguard.enable = true;
   };
 }
