@@ -11,5 +11,6 @@
     kde-connect.enable = true;
     zram.enable = true;
     bluetooth.enable = true;
+    zsh.enable = true;
   };
 }
